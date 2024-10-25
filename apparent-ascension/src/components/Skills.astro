@@ -1,0 +1,24 @@
+---
+const skills = [
+    { name: "JavaScript", description: "Experienced in building dynamic web applications using JavaScript, including ES6+ features." },
+    { name: "React", description: "Proficient in developing single-page applications using React and related libraries like Redux." },
+    { name: "Node.js", description: "Skilled in building server-side applications and RESTful APIs using Node.js and Express." },
+    { name: "HTML & CSS", description: "Strong understanding of HTML5 and CSS3, including modern layout techniques like Flexbox and Grid." },
+    { name: "Git & GitHub", description: "Experienced in version control using Git and collaborating on projects through GitHub." },
+    { name: "SQL & NoSQL", description: "Knowledgeable in working with both SQL databases (e.g., MySQL, PostgreSQL) and NoSQL databases (e.g., MongoDB)." },
+    { name: "TypeScript", description: "Familiar with TypeScript for adding static types to JavaScript, improving code quality and maintainability." },
+    { name: "Testing", description: "Experienced in writing unit and integration tests using frameworks like Jest and Mocha." },
+];
+---
+
+<section id="skills">
+    <h2>Skills & Technologies</h2>
+    <ul>
+        {skills.map(skill => (
+            <li>
+                <h3>{skill.name}</h3>
+                <p>{skill.description}</p>
+            </li>
+        ))}
+    </ul>
+</section>

@@ -1,0 +1,45 @@
+---
+const experiences = [
+    {
+        role: "Desarrollador Frontend",
+        company: "Tech Solutions",
+        period: "Enero 2020 - Presente",
+        description: "Desarrollé y mantuve aplicaciones web utilizando React, Redux y TypeScript. Colaboré con equipos de diseño y backend para implementar nuevas funcionalidades y mejorar la experiencia del usuario."
+    },
+    {
+        role: "Ingeniero de Software",
+        company: "Innovatech",
+        period: "Marzo 2018 - Diciembre 2019",
+        description: "Participé en el desarrollo de soluciones de software a medida para clientes en diversas industrias. Utilicé tecnologías como Node.js, Express y MongoDB para crear APIs robustas y escalables."
+    },
+    {
+        role: "Desarrollador Junior",
+        company: "WebWorks",
+        period: "Julio 2016 - Febrero 2018",
+        description: "Contribuí al desarrollo de sitios web y aplicaciones móviles utilizando HTML, CSS, JavaScript y frameworks como Angular. Aprendí buenas prácticas de desarrollo y trabajé en un entorno ágil."
+    }
+];
+---
+
+<section id="experience">
+    <h2>Experiencia</h2>
+    {experiences.map(exp => (
+        <div class="experience-item">
+            <h3>{exp.role} en {exp.company}</h3>
+            <p><strong>Periodo:</strong> {exp.period}</p>
+            <p>{exp.description}</p>
+        </div>
+    ))}
+</section>
+
+<style>
+    #experience {
+        padding: 2rem;
+    }
+    .experience-item {
+        margin-bottom: 1.5rem;
+    }
+    .experience-item h3 {
+        margin: 0;
+    }
+</style>

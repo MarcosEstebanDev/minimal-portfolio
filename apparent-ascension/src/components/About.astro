@@ -1,0 +1,89 @@
+---
+const profile = {
+    name: "Marco",
+    title: "Full Stack Developer",
+    description: "Passionate developer with experience in building web applications using modern technologies. Skilled in JavaScript, React, Node.js, and more.",
+    contact: {
+        email: "marco@example.com",
+        phone: "+1234567890",
+        location: "City, Country"
+    },
+    skills: ["JavaScript", "React", "Node.js", "HTML", "CSS", "Git"],
+    experience: [
+        {
+            company: "Tech Company",
+            role: "Software Engineer",
+            period: "Jan 2020 - Present",
+            description: "Developed and maintained web applications using React and Node.js."
+        },
+        {
+            company: "Another Tech Company",
+            role: "Frontend Developer",
+            period: "Jun 2018 - Dec 2019",
+            description: "Worked on various frontend projects using HTML, CSS, and JavaScript."
+        }
+    ],
+    education: [
+        {
+            institution: "University Name",
+            degree: "Bachelor's in Computer Science",
+            period: "2014 - 2018"
+        }
+    ]
+};
+---
+
+<section class="about">
+    <h1>About Me</h1>
+    <h2>{profile.name}</h2>
+    <h3>{profile.title}</h3>
+    <p>{profile.description}</p>
+
+    <h4>Contact Information</h4>
+    <ul>
+        <li>Email: {profile.contact.email}</li>
+        <li>Phone: {profile.contact.phone}</li>
+        <li>Location: {profile.contact.location}</li>
+    </ul>
+
+    <h4>Skills</h4>
+    <ul>
+        {profile.skills.map(skill => <li>{skill}</li>)}
+    </ul>
+
+    <h4>Experience</h4>
+    <ul>
+        {profile.experience.map(job => (
+            <li>
+                <strong>{job.company}</strong> - {job.role} ({job.period})
+                <p>{job.description}</p>
+            </li>
+        ))}
+    </ul>
+
+    <h4>Education</h4>
+    <ul>
+        {profile.education.map(edu => (
+            <li>
+                <strong>{edu.institution}</strong> - {edu.degree} ({edu.period})
+            </li>
+        ))}
+    </ul>
+</section>
+
+<style>
+    .about {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    .about h1, .about h2, .about h3, .about h4 {
+        color: #333;
+    }
+    .about ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .about li {
+        margin-bottom: 10px;
+    }
+</style>

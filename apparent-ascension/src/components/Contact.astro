@@ -1,0 +1,31 @@
+---
+const contactInfo = {
+    github: "https://github.com/tu-usuario",
+    linkedin: "https://www.linkedin.com/in/tu-usuario"
+};
+---
+
+<html>
+    <head>
+        <title>Contact</title>
+    </head>
+    <body>
+        <h1>Contact Me</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+        
+        <h2>Contact Information</h2>
+        <p>GitHub: <a href={contactInfo.github} target="_blank">{contactInfo.github}</a></p>
+        <p>LinkedIn: <a href={contactInfo.linkedin} target="_blank">{contactInfo.linkedin}</a></p>
+    </body>
+</html>
