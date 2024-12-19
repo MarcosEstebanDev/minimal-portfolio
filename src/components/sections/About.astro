@@ -1,83 +1,63 @@
 ---
+// Correct the import path
+import cv from '../../../cv.json';
+
 const profile = {
-    name: "Marco",
-    title: "Full Stack Developer",
-    description: "Passionate developer with experience in building web applications using modern technologies. Skilled in JavaScript, React, Node.js, and more.",
+    name: cv.basics.name,
+    title: cv.basics.label,
+    description: cv.about.description, // Use the description from the about section
     contact: {
-        email: "marco@example.com",
-        phone: "+1234567890",
-        location: "City, Country"
+        email: cv.basics.email,
+        phone: cv.basics.phone,
+        location: `${cv.basics.location.city}, ${cv.basics.location.region}`
     },
-    skills: ["JavaScript", "React", "Node.js", "HTML", "CSS", "Git"],
-    experience: [
-        {
-            company: "Tech Company",
-            role: "Software Engineer",
-            period: "Jan 2020 - Present",
-            description: "Developed and maintained web applications using React and Node.js."
-        },
-        {
-            company: "Another Tech Company",
-            role: "Frontend Developer",
-            period: "Jun 2018 - Dec 2019",
-            description: "Worked on various frontend projects using HTML, CSS, and JavaScript."
-        }
-    ],
-    education: [
-        {
-            institution: "University Name",
-            degree: "Bachelor's in Computer Science",
-            period: "2014 - 2018"
-        }
-    ]
+    technologies: cv.technologies[0].keywords,
+    skills: cv.skills[0].keywords,
+    experience: cv.work.map(job => ({
+        company: job.name,
+        role: job.position,
+        period: `${job.startDate} - ${job.endDate}`,
+        description: job.summary
+    })),
+    education: cv.education.map(edu => ({
+        institution: edu.institution,
+        degree: edu.studyType,
+        period: `${edu.startDate} - ${edu.endDate}`
+    }))
 };
 ---
 
 <section class="about">
     <h1>About Me</h1>
-    <h2>{profile.name}</h2>
-    <h3>{profile.title}</h3>
-    <p>{profile.description}</p>
+    <h2 class="name">{profile.name}</h2>
+    <h3 class="title">{profile.title}</h3>
+    <p class="description">{profile.description}</p>
 
-    <h4>Contact Information</h4>
-    <ul>
-        <li>Email: {profile.contact.email}</li>
-        <li>Phone: {profile.contact.phone}</li>
-        <li>Location: {profile.contact.location}</li>
-    </ul>
+    <div class="container">
+        <div class="section">
+            <h4>Technologies</h4>
+            <div class="technologies">
+                {profile.technologies.map(technology => <span class="technology">{technology}</span>)}
+            </div>
+        </div>
+        <div class="section">
+            <h4>Skills</h4>
+            <div class="skills">
+                {profile.skills.map(skill => <span class="skill">{skill}</span>)}
+            </div>
+        </div>
+    </div>
 
-    <h4>Skills</h4>
-    <ul>
-        {profile.skills.map(skill => <li>{skill}</li>)}
-    </ul>
-
-    <h4>Experience</h4>
-    <ul>
-        {profile.experience.map(job => (
-            <li>
-                <strong>{job.company}</strong> - {job.role} ({job.period})
-                <p>{job.description}</p>
-            </li>
-        ))}
-    </ul>
-
-    <h4>Education</h4>
-    <ul>
-        {profile.education.map(edu => (
-            <li>
-                <strong>{edu.institution}</strong> - {edu.degree} ({edu.period})
-            </li>
-        ))}
-    </ul>
-</section>
 
 <style>
     .about {
-        font-family: Arial, sans-serif;
-        margin: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Use the specified font family */
+        margin: 20px auto; /* Center the container */
+        max-width: 800px; /* Optional: limit the width of the container */
     }
     .about h1, .about h2, .about h3, .about h4 {
         color: #333;
+        margin-bottom: 20px; /* Add more separation between titles */
     }
     .about ul {
         list-style-type: none;
@@ -85,5 +65,37 @@ const profile = {
     }
     .about li {
         margin-bottom: 10px;
+    }
+    .description {
+        font-weight: bold;
+        color: #6c757d; /* Grey color */
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px; /* Separation from the text */
+    }
+    .section {
+        flex: 1;
+        margin-right: 20px;
+    }
+    .technologies, .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .technology, .skill {
+        background-color: #6c757d; /* Grey background */
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        display: inline-block;
+    }
+    .name {
+        color: black; /* Make the name black */
+    }
+    .title {
+        margin-top: -10px; /* Move the title closer to the name */
     }
 </style>

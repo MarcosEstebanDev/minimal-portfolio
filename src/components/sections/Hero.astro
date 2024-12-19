@@ -1,34 +1,66 @@
 ---
 import { basics } from '@cv'
-import  Section  from '@/components/Section.astro'
-const {name, label, image, email, phone,  summary, location, profiles} = basics
+import Section from '@/components/Section.astro'
+const { name, label, image, email, phone, summary, location, profiles } = basics
 ---
 
-<Section >
+<Section>
     <div class="container">
-      <div class="info">
-            <h1>{name}</h1>
-            <p>{label}</p>
-            <figure>
-                <img src={image} alt={name} />
-            </figure>
-            <footer>
-                <ul>
+        <div class="info">
+            <div class="details">
+                <h1>{name}</h1>
+                <p class="label">{label}</p>
+                <p class="summary">{summary}</p>
+                <ul class="contact-info">
                     <li>Email: {email}</li>
                     <li>Phone: {phone}</li>
-                <p>{summary}</p>
-                <p>{location.city}, {location.region}, {location.countryCode}</p>
-                <ul>
+                    <li>Location: {location.city}, {location.region}, {location.countryCode}</li>
+                </ul>
+                <ul class="profiles">
                     {profiles.map(profile => (
-                        <li><a href={profile.url} target="_blank">{profile.network}</a></li>
+                        <li><a href={profile.url} target="_blank" class="profile-link">{profile.network}</a></li>
                     ))}
                 </ul>
-            </footer>
-            
-      </div>
+            </div>
+        </div>
+        <figure>
+            <img src={image} alt={name} />
+        </figure>
     </div>
 </Section>
 
 <style>
-    
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: flex-start; /* Asegura que los elementos estén alineados en la parte superior */
+}
+
+figure {
+    margin-left: 20px;
+}
+
+figure img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.details {
+    flex: 1;
+}
+
+h1 {
+    font-size: 2em; /* Aumenta el tamaño de la fuente del nombre */
+}
+
+.label, .summary, .contact-info, .profiles {
+    font-size: 0.9em; /* Reduce el tamaño de la fuente de los datos */
+}
+
+.profile-link {
+    font-size: 0.9em; /* Ajusta el tamaño de la fuente del enlace */
+}
+
+/* ...existing code... */
 </style>

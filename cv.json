@@ -1,22 +1,25 @@
 {
     "basics": {
       "name": "Marcos Esteban Godoy",
-      "label": "Software Developer",
+      "label": "Desarrollador de Software",
       "image": "https://avatars.githubusercontent.com/u/83374363?s=400&u=f00056c391a008407c912ff348424cbb93ae7c45&v=4",
       "email": "marcosestebandev@gmail.com",
       "phone": "(+54) 03516742030",
       "url": "https://marcosestebandev.com",
-      "summary": "A summary of Marcos Esteban Godoy…",
+      "summary": "Marcos, desarrollador de software",
       "location": {
-        "city": "Cordoba, Cordoba Capital",
+        "city": "Cordoba",
         "countryCode": "AR",
-        "region": "Cordoba"
+        "region": "Argentina"
       },
       "profiles": [{
         "network": "linkedin",
         "username": "marcosesgodoy",
-        "url": "https://www.linkedin.com/in/marcosesgodoy/"
+        "url": "https://www.linkedin.com/in/marcos-godoy92/"
       }]
+    },
+    "about": {
+      "description": "Soy Marcos Esteban Godoy, un apasionado desarrollador de software con una sólida formación en desarrollo web y experiencia en tecnologías modernas. Actualmente, trabajo en Seidor Analytics, donde soy responsable de desarrollar nuevas funcionalidades tanto en el backend como en el frontend, optimizando continuamente la experiencia de usuario. Además, he colaborado con equipos multidisciplinarios en No Country, aplicando metodologías ágiles para desarrollar proyectos web. Mi formación académica incluye un título en Desarrollo de Software del Instituto Técnico Superior Teclab, donde adquirí habilidades en HTML, CSS, JavaScript, Java, PHP, y más. Estoy comprometido con el aprendizaje continuo y la mejora de mis habilidades para ofrecer soluciones de alta calidad."
     },
     "work": [{
       "name": "Seidor analytics",
@@ -84,7 +87,7 @@
       "url": "https://publication.com",
       "summary": "Description…"
     }],
-    "skills": [{
+    "technologies": [{
       "name":"Software Developer",
       "level": "Master",
       "keywords": [
@@ -111,6 +114,18 @@
       "Spring Security"
       ]
     }],
+    "skills": [{
+      "name": "Software Developer",
+      "level": "Master",
+      "keywords": [
+        "Problem Solving",
+        "Team Collaboration",
+        "Agile Methodologies",
+        "Project Management",
+        "Communication",
+        "Critical Thinking"
+      ]
+    }],
     "languages": [{
       "language": "English",
       "fluency": "Professional working"
@@ -121,10 +136,6 @@
         "Ferrets",
         "Unicorns"
       ]
-    }],
-    "references": [{
-      "name": "Jane Doe",
-      "reference": "Reference…"
     }],
     "projects": [{
       "name": "Project",
