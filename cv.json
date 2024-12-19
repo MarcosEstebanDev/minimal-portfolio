@@ -1,0 +1,139 @@
+{
+    "basics": {
+      "name": "Marcos Esteban Godoy",
+      "label": "Software Developer",
+      "image": "https://avatars.githubusercontent.com/u/83374363?s=400&u=f00056c391a008407c912ff348424cbb93ae7c45&v=4",
+      "email": "marcosestebandev@gmail.com",
+      "phone": "(+54) 03516742030",
+      "url": "https://marcosestebandev.com",
+      "summary": "A summary of Marcos Esteban Godoy…",
+      "location": {
+        "city": "Cordoba, Cordoba Capital",
+        "countryCode": "AR",
+        "region": "Cordoba"
+      },
+      "profiles": [{
+        "network": "linkedin",
+        "username": "marcosesgodoy",
+        "url": "https://www.linkedin.com/in/marcosesgodoy/"
+      }]
+    },
+    "work": [{
+      "name": "Seidor analytics",
+      "position": "Desarrollador de Software",
+      "url": "https://www.seidoranalytics.com/",
+      "startDate": "2024-03-11",
+      "endDate": "Actualidad",
+      "summary": "Description…",
+      "highlights": [
+        "Soy responsable de desarrollar nuevas funcionalidades tanto en el backend como en el frontend, optimizando continuamente la experiencia de usuario.",
+        "Trabajo en colaboración con equipos multidisciplinarios, empleando metodologías ágiles como Scrum, para alinear los proyectos con los requerimientos internos y externos.",
+        "Además, garantizo un mantenimiento evolutivo y correctivo eficiente, contribuyendo a implementar mejoras significativas en la usabilidad y estrategias que incrementan la calidad y eficiencia de los productos.",
+        "Responsabilidades",
+        "- Desarrollo nuevas funcionalidades tanto en el backend como en el frontend de la aplicación, utilizando tecnologías como Python (Flask, Django), React y Next.js.",
+        "- Colaboro estrechamente con equipos multidisciplinarios, utilizando metodologías ágiles como Scrum, para guiar el proyecto y cumplir con los requerimientos de los usuarios mediante la integración de APIs RESTful.",
+        "- Optimizo la experiencia de usuario a través de mejoras continuas en la interfaz y la usabilidad, aplicando buenas prácticas en frontend (React, TypeScript) y diseño centrado en el usuario.",
+        "- Realizo seguimiento meticuloso de proyectos, asegurando la alineación con los requerimientos internos y externos, así como la correcta gestión de bases de datos relacionales como PostgreSQL, incluyendo plataformas como Supabase.",
+        "- Realizo mantenimiento evolutivo y correctivo de los proyectos implementados, garantizando su funcionamiento óptimo y su adaptación a las necesidades cambiantes mediante el uso de herramientas."
+      ]
+    }],
+    "volunteer": [{
+      "organization": "No Country",
+      "position": "Volunteer",
+      "url": "https://www.nocountry.tech/",
+      "startDate": "2023-01-12",
+      "endDate": "2024-02-29",
+      "summary": "Desarrollador Backend",
+      "highlights": [
+        "Programa de Prácticas de Desarrollo de Proyectos Web en equipos de trabajo multidisciplinarios.Se crean emulaciones de trabajo real organizados por la empresa, dentro de un programa diseñado para aplicar y validar capacidades técnicas, habilidades blandas y generar experiencia acelerando la inserción en la industria TI. Team Leader, Full Stack Developer."
+      ]
+    }],
+    "education": [{
+      "institution": "Teclab Instituto Técnico Superior",
+      "url": "https://teclab.edu.ar/",
+      "area": "Software Development",
+      "studyType": "Bachelor Degree",
+      "startDate": "2024-01-30",
+      "endDate": "2025-01-30",
+      "score": "6.0",
+      "courses": [
+        "- Desarrollar software sobre plataformas web en HTML, CSS y JAVASCRIPT. JAVA, PHP.",
+        "- Configurar e implementar bases de datos utilizando SQL, Oracle y PostgreSQL.",
+        "- Administrar ciclos de vida del software con herramientas de gestión de proyecto.",
+        "- Manejo de técnicas estructuradas de diseño, lógica y algoritmos.",
+        "- Programar en dispositivos móviles usando Java y herramientas de desarrollo Android.",
+        "- Crear apps con Material Design y Responsive Design."
+      ]
+    }],
+    "certificates": [{
+      "name": "JavaScript Algorithms and Data Structures",
+      "date": "2021-11-07",
+      "issuer": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/espanol/certification/MarcosEstebanGodoy/javascript-algorithms-and-data-structures"
+    },
+    {
+      "name": "Development of web pages, digital/multimedia content and IT resources",
+      "date": "2021-11-07",
+      "issuer": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/espanol/certification/MarcosEstebanGodoy/responsive-web-design"
+    }],
+    "publications": [{
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }],
+    "skills": [{
+      "name":"Software Developer",
+      "level": "Master",
+      "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Python",
+      "Flask",
+      "Django",
+      "SQL",
+      "PostgreSQL",
+      "MongoDB",
+      "SQLAlchemy",
+      "APIs RESTful",
+      "Node.js",
+      "Supabase",
+      "Docker",
+      "JAVA",
+      "ChatGPT API",
+      "Spring Boot",
+      "Spring Security"
+      ]
+    }],
+    "languages": [{
+      "language": "English",
+      "fluency": "Professional working"
+    }],
+    "interests": [{
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }],
+    "references": [{
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }],
+    "projects": [{
+      "name": "Project",
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Description...",
+      "highlights": [
+        "Won award at AIHacks 2016"
+      ],
+      "url": "https://project.com/"
+    }]
+  }
