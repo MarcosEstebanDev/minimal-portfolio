@@ -5,7 +5,7 @@ const { name, label, image, email, phone, summary, location, profiles } = basics
 ---
 
 <Section>
-    <div class="container">
+    <div class="container no-background paper-background gray-background">
         <div class="info">
             <div class="details">
                 <h1>{name}</h1>
@@ -34,6 +34,24 @@ const { name, label, image, email, phone, summary, location, profiles } = basics
     display: flex;
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
     align-items: flex-start; /* Asegura que los elementos estén alineados en la parte superior */
+    position: relative;
+    z-index: 1;
+    width: 100%; /* Adjust width to prevent overflow */
+    height: auto; /* Adjust height to fit content */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Add padding to prevent overlap */
+}
+
+.no-background {
+    background: none;
+}
+
+.paper-background {
+    background: white; /* Ensure the background is white */
+}
+
+.gray-background {
+    background-color: #f0f0f0; /* Add a light gray background */
 }
 
 figure {
@@ -51,11 +69,11 @@ figure img {
 }
 
 h1 {
-    font-size: 2em; /* Aumenta el tamaño de la fuente del nombre */
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente del nombre */
 }
 
 .label, .summary, .contact-info, .profiles {
-    font-size: 0.9em; /* Reduce el tamaño de la fuente de los datos */
+    font-size: 0.8em; /* Reduce el tamaño de la fuente de los datos */
 }
 
 .profile-link {

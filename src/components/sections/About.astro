@@ -13,23 +13,11 @@ const profile = {
     },
     technologies: cv.technologies[0].keywords,
     skills: cv.skills[0].keywords,
-    experience: cv.work.map(job => ({
-        company: job.name,
-        role: job.position,
-        period: `${job.startDate} - ${job.endDate}`,
-        description: job.summary
-    })),
-    education: cv.education.map(edu => ({
-        institution: edu.institution,
-        degree: edu.studyType,
-        period: `${edu.startDate} - ${edu.endDate}`
-    }))
 };
 ---
 
 <section class="about">
     <h1>About Me</h1>
-    <h2 class="name">{profile.name}</h2>
     <h3 class="title">{profile.title}</h3>
     <p class="description">{profile.description}</p>
 

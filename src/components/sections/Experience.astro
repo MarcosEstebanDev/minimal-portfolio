@@ -1,45 +1,56 @@
 ---
-const experiences = [
-    {
-        role: "Desarrollador Frontend",
-        company: "Tech Solutions",
-        period: "Enero 2020 - Presente",
-        description: "Desarrollé y mantuve aplicaciones web utilizando React, Redux y TypeScript. Colaboré con equipos de diseño y backend para implementar nuevas funcionalidades y mejorar la experiencia del usuario."
-    },
-    {
-        role: "Ingeniero de Software",
-        company: "Innovatech",
-        period: "Marzo 2018 - Diciembre 2019",
-        description: "Participé en el desarrollo de soluciones de software a medida para clientes en diversas industrias. Utilicé tecnologías como Node.js, Express y MongoDB para crear APIs robustas y escalables."
-    },
-    {
-        role: "Desarrollador Junior",
-        company: "WebWorks",
-        period: "Julio 2016 - Febrero 2018",
-        description: "Contribuí al desarrollo de sitios web y aplicaciones móviles utilizando HTML, CSS, JavaScript y frameworks como Angular. Aprendí buenas prácticas de desarrollo y trabajé en un entorno ágil."
-    }
-];
+import cv from '../../../cv.json';
+
+const { work: experiences } = cv;
+const { description: aboutDescription } = cv.about;
 ---
 
 <section id="experience">
-    <h2>Experiencia</h2>
-    {experiences.map(exp => (
-        <div class="experience-item">
-            <h3>{exp.role} en {exp.company}</h3>
-            <p><strong>Periodo:</strong> {exp.period}</p>
-            <p>{exp.description}</p>
-        </div>
-    ))}
+    <div class="container">
+        <h2>Experiencia</h2>
+        {experiences.map(exp => (
+            <div class="experience-item">
+                <h3>{exp.position} en {exp.name}</h3>
+                <p><strong>Periodo:</strong> {exp.startDate} - {exp.endDate}</p>
+                <ul>
+                    {exp.highlights.map(highlight => (
+                        <li>
+                            {highlight.includes("Responsabilidades") ? <strong>{highlight}</strong> : highlight}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        ))}
+    </div>
 </section>
 
+
 <style>
-    #experience {
+    #experience{
         padding: 2rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+        line-height: 1.4;
     }
     .experience-item {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
     }
-    .experience-item h3 {
-        margin: 0;
+    .experience-item h3, h2 {
+        margin: 0 0 0.5rem 0;
+        color: #333;
+    }
+    .experience-item p {
+        margin: 1rem 0;
+    }
+    .experience-item ul {
+        margin: 1rem 0 0 1.5rem;
+        padding: 0;
+    }
+    .experience-item li {
+        margin-bottom: 0.5rem;
     }
 </style>

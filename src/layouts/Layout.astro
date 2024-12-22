@@ -34,7 +34,9 @@ const { image, summary, url } = basics
     <meta name="twitter:image" content="" />
   </head>
   <body>
-    <slot />
+    <div class="container a4-layout">
+      <slot />
+    </div>
   </body>
 </html>
 
@@ -47,7 +49,7 @@ const { image, summary, url } = basics
       "Courier New",
       Courier,
       monospace;
-    background: #fff;
+    background: #f0f0f0; /* Cambia el fondo a un blanco grisáceo */
     letter-spacing: -0.025rem;
   }
 
@@ -120,5 +122,15 @@ const { image, summary, url } = basics
     article {
       break-inside: avoid;
     }
+  }
+
+  .container {
+    padding: 20px; /* Optional: add some padding */
+  }
+
+  .a4-layout {
+    background-color: #e0e0e0; /* Grey background */
+    border: 1px solid #ccc; /* Add border */
+    padding: 20px; /* Add padding */
   }
 </style>
