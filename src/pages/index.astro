@@ -18,12 +18,12 @@ import KeyboardManager from '@/components/KeyboardManager.astro';
 				<About id="aboutSection" class="section-margin-small" />
 			</section>
 			<section class="page paper-background">
-				<Experience />
-				<Education />
+				<Experience class="section-margin-small" />
+				<Education class="section-margin-small" />
 			</section>
 			<section class="page paper-background">
-				<Skills />
-				<Projects />
+				<Skills class="section-margin-small" />
+				<Projects class="section-margin-small" />
 			</section>
 			<section class="page paper-background">
 				<Contact id="contactSection">
@@ -133,6 +133,8 @@ import KeyboardManager from '@/components/KeyboardManager.astro';
 		border-radius: 5px; /* Add slight rounding to the corners */
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 		flex-shrink: 0; /* Prevent shrinking */
+		font-size: 16px; /* Revert font size to original */
+		height: auto; /* Revert height to auto to fit content */
 	}
 
 	.paper-background {
@@ -158,6 +160,10 @@ import KeyboardManager from '@/components/KeyboardManager.astro';
 
 	.section-margin-medium {
 		margin-top: 20mm; /* Reduce margin to prevent overlap */
+	}
+
+	.section-margin-small {
+		margin-top: 10mm; /* Reduce margin to make sections closer */
 	}
 
 	.paper-border {

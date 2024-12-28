@@ -1,27 +1,33 @@
 ---
-const education = [
-    {
-        degree: "Bachelor of Science in Computer Science",
-        institution: "University of Technology",
-        year: "2015 - 2019",
-        description: "Focused on software development, algorithms, and data structures. Graduated with honors."
-    },
-    {
-        degree: "Master of Science in Artificial Intelligence",
-        institution: "Institute of Advanced Studies",
-        year: "2020 - 2022",
-        description: "Specialized in machine learning, neural networks, and data analysis. Completed a thesis on deep learning applications."
-    }
-];
+import cv from '../../../cv.json';
+
+const { education, certificates, volunteer } = cv;
 ---
 
 <section id="education">
     <h2>Education</h2>
     {education.map((edu) => (
         <div class="education-item">
-            <h3>{edu.degree}</h3>
-            <p><strong>{edu.institution}</strong> | {edu.year}</p>
-            <p>{edu.description}</p>
+            <h3>{edu.studyType} in {edu.area}</h3>
+            <p><strong>{edu.institution}</strong> | {edu.startDate} - {edu.endDate}</p>
+            <p>{edu.courses.join(' ')}</p>
+        </div>
+    ))}
+    <h2>Certificates</h2>
+    {certificates.map((cert) => (
+        <div class="certificate-item">
+            <h3>{cert.name}</h3>
+            <p><strong>{cert.issuer}</strong> | {cert.date}</p>
+            <p><a href={cert.url} target="_blank">View Certificate</a></p>
+        </div>
+    ))}
+    <h2>Volunteer</h2>
+    {volunteer.map((vol) => (
+        <div class="volunteer-item">
+            <h3>{vol.position} at {vol.organization}</h3>
+            <p><strong>{vol.startDate} - {vol.endDate}</strong></p>
+            <p>{vol.summary}</p>
+            <p>{vol.highlights.join(' ')}</p>
         </div>
     ))}
 </section>
@@ -29,11 +35,14 @@ const education = [
 <style>
     #education {
         padding: 20px;
+        font-size: 14px; /* Reduce font size specifically for Experience section */
+
+        min-height: auto; /* Revert minimum height to auto */
     }
-    .education-item {
+    .education-item, .certificate-item, .volunteer-item {
         margin-bottom: 20px;
     }
-    .education-item h3 {
-        margin: 0;
+    .education-item h3, .certificate-item h3, .volunteer-item h3 {
+        margin: 20px 0 10px 0; /* Reduce margin to decrease separation from content */
     }
 </style>
